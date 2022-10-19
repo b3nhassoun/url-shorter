@@ -5,9 +5,9 @@
 
 ![main/url-shorter.gif](https://raw.githubusercontent.com/b3nhassoun/url-shorter/main/url-shorter.gif)
 
-***PyShorteners Documentation:*** https://pyshorteners.readthedocs.io/en/latest/
+***PyShorteners Documentation:*** https://pyshorteners.readthedocs.io/en/latest/***
 
-***Prerequisites:
+***Prerequisites:***
 -Python 3.10 or later https://www.python.org/
 -Flask https://flask.palletsprojects.com/en/2.2.x/
 
