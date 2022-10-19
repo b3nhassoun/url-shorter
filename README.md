@@ -1,6 +1,10 @@
 
 **_URL Shortener_**
 
-* URL shortener, a web app service that takes any URL and generates a shorter, more readable version like. Built using Flask & pyshorteners.
+*URL shortener, a web app service that takes any URL and generates a shorter, more readable version like. Built using Flask & pyshorteners.*
 
-!(main/url-shorter.gif)
+![main/url-shorter.gif](https://raw.githubusercontent.com/b3nhassoun/url-shorter/main/url-shorter.gif)
+
+***PyShorteners Documentation:*** https://pyshorteners.readthedocs.io/en/latest/
+
+
