@@ -1,0 +1,399 @@
+/* heading */
+
+#heading {
+  width: 80%;
+  margin: 1vw auto;
+}
+
+.heading {
+  font-family: "Playfair Display", serif;
+  font-size: 10vw;
+  width: 89%;
+  margin: 1vw auto;
+}
+
+@media only screen and (max-width: 415px) {
+  .heading {
+    margin: 20vw auto;
+  }
+}
+
+.subheading {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2em;
+  line-height: 1.5;
+}
+
+@media only screen and (max-width: 415px) {
+  .subheading {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+  }
+}
+
+.underline--magical {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+}
+.underline--magical:hover {
+  background-size: 100% 88%;
+}
+
+/* input bar*/
+.input-bar {
+  align-items: center;
+  display: flex;
+  height: 20vh;
+  justify-content: center;
+  margin: 0;
+}
+.a11y-hidden {
+  position: absolute;
+  left: -1000in;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 0 0);
+}
+.url_request {
+  width: 90%;
+  max-width: 30rem;
+  position: relative;
+}
+.url_request .input-bar {
+  --active: #eee;
+  align-items: center;
+  background: #fff;
+  border: 2px solid black;
+  border-radius: 4rem;
+  box-sizing: border-box;
+  box-shadow: 0 1rem 2rem -1.5rem;
+  display: inline-flex;
+  height: 4rem;
+  overflow: hidden;
+  transition: box-shadow 0.5s;
+  width: 100%;
+}
+.url_request .input-bar:focus-within {
+  background: #fffffc;
+  border: 2px solid #444;
+  box-shadow: 0 1rem 2rem -1.5rem #000 7;
+}
+.url_request .input-bar:hover {
+  box-shadow: 0 1rem 2rem -1.5rem #000 7;
+}
+.url_request .input-bar label {
+  position: absolute;
+  color: #888;
+  left: 1.625rem;
+  font-family: Lato, Arial, sans-serif;
+  font-size: 1.25rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: calc(100% - 8rem);
+  max-width: calc(100% - 8rem);
+  display: flex;
+  align-items: center;
+  z-index: 0;
+}
+.url_request .input-bar label span {
+  visibility: hidden;
+  overflow: hidden;
+  max-width: 0;
+  display: inline-block;
+  margin: 0 0.125rem;
+  transition: max-width 1s, margin 0.125s;
+  transition-delay: 1s;
+}
+.url_request .input-bar label span.show {
+  visibility: visible;
+  margin: 0 0.25rem;
+  max-width: calc(100% - 8rem);
+}
+.url_request .input-bar input {
+  background: transparent;
+  border: 0;
+  box-sizing: border-box;
+  flex: 1;
+  font-size: 1.25rem;
+  margin-left: 0.5rem;
+  min-width: 8rem;
+  outline: none;
+  padding-left: 1rem;
+  position: relative;
+  z-index: 1;
+}
+.url_request .input-bar input::-ms-clear,
+.url_request .input-bar input::ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.url_request .input-bar input::-webkit-search-decoration,
+.url_request .input-bar input::-webkit-search-cancel-button,
+.url_request .input-bar input::-webkit-search-results-button,
+.url_request .input-bar input::-webkit-search-results-decoration {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.url_request .input-bar button {
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  color: #444;
+  font-size: 1.25rem;
+  margin: 0;
+  outline: none;
+  width: 3rem;
+  min-width: 3rem;
+  height: 3rem;
+  transition: background-color, color;
+  transition-duration: 0.25s;
+  box-shadow: 0 0 1rem;
+}
+.url_request .input-bar button:hover {
+  background: #eee;
+}
+.url_request .input-bar button:focus {
+  background: #444;
+  color: #fff;
+}
+.url_request .input-bar button:active,
+.url_request .input-bar button.active {
+  background: #000;
+}
+.url_request .input-bar button#dictate {
+  transform: scale(0);
+  transition: transform 0.5s;
+  transition-delay: 1s;
+  visibility: hidden;
+}
+.url_request .input-bar button#dictate svg {
+  display: none;
+  margin: auto auto;
+}
+.url_request .input-bar button#dictate.show {
+  visibility: visible;
+  transform: scale(1);
+}
+.url_request .input-bar button#dictate.active i {
+  display: none;
+}
+.url_request .input-bar button#dictate.active svg {
+  display: block;
+}
+.url_request .input-bar button:last-child {
+  margin-right: 1rem;
+}
+
+@media only screen and (max-width: 415px) {
+  .url_request .input-bar button:last-child {
+    margin-right: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  #copytoclip {
+    margin-left: 0rem;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  * {
+    transition: none !important;
+    transition-delay: 0s !important;
+  }
+}
+
+/* short-url output label*/
+
+@import url("https://fonts.googleapis.com/css?family=Mukta:700");
+
+.another_one {
+  font-family: "Mukta", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  min-height: 10vh;
+}
+#button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+button.try_again {
+  width: 12rem;
+  height: auto;
+}
+button.try_again .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+button.try_again .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+button.try_again .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+button.try_again .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+button.try_again .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+button:hover .circle {
+  width: 100%;
+}
+button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+button:hover .button-text {
+  color: #fff;
+}
+
+/* footer */
+.custom {
+  display: grid;
+  grid-template-rows: 1fr 10rem auto;
+  grid-template-areas: "main" "." "footer";
+  overflow-x: hidden;
+  min-height: 60vh;
+  font-family: "Open Sans", sans-serif;
+}
+.custom .footer {
+  z-index: 1;
+  --footer-background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  display: grid;
+  position: relative;
+  grid-area: footer;
+  min-height: 12rem;
+}
+.custom .footer .bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1rem;
+  background: var(--footer-background);
+  filter: url("#blob");
+}
+.custom .footer .bubbles .bubble {
+  position: absolute;
+  left: var(--position, 50%);
+  background: var(--footer-background);
+  border-radius: 100%;
+  animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
+    bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+  transform: translate(-50%, 100%);
+}
+.custom .footer .content {
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: 4rem;
+  padding: 2rem;
+  background: var(--footer-background);
+}
+.custom .footer .content a,
+body .footer .content p {
+  color: #f5f7fa;
+  text-decoration: none;
+}
+body .footer .content b {
+  color: white;
+}
+.custom .footer .content p {
+  margin: 0;
+  font-size: 0.75rem;
+}
+.custom .footer .content > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.custom .footer .content > div > div {
+  margin: 0.25rem 0;
+}
+.custom .footer .content > div > div > * {
+  margin-right: 0.5rem;
+}
+.custom .footer .content > div .image {
+  align-self: center;
+  width: 4rem;
+  height: 4rem;
+  margin: 0.25rem 0;
+  background-size: cover;
+  background-position: center;
+}
+@keyframes bubble-size {
+  0%,
+  75% {
+    width: var(--size, 4rem);
+    height: var(--size, 4rem);
+  }
+  100% {
+    width: 0rem;
+    height: 0rem;
+  }
+}
+@keyframes bubble-move {
+  0% {
+    bottom: -4rem;
+  }
+  100% {
+    bottom: var(--distance, 10rem);
+  }
+}
