@@ -8,7 +8,9 @@
 ***PyShorteners Documentation:*** https://pyshorteners.readthedocs.io/en/latest/***
 
 ***Prerequisites:***
--Python 3.10 or later https://www.python.org/
--Flask https://flask.palletsprojects.com/en/2.2.x/
+- Python 3.10 or later 
+https://www.python.org/
+- Flask 
+https://flask.palletsprojects.com/en/2.2.x/
 
 
